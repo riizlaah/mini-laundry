@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\mini_laundry\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\mini_laundry\\mini_laundry\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|solutionrelative:mini_laundry\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\mini_laundry\\mini_laundry\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|solutionrelative:mini_laundry\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\mini_laundry\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|solutionrelative:mini_laundry\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\mini_laundry\\mini_laundry\\view\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|solutionrelative:mini_laundry\\view\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\mini_laundry\\mini_laundry\\view\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|solutionrelative:mini_laundry\\view\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\mini_laundry\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{152A08D3-16A3-4C8B-AF31-D37644BC5757}|Mini_Laundry\\Mini_Laundry.csproj|solutionrelative:mini_laundry\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +30,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\Mini_Laundry\\View\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Mini_Laundry\\View\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\Mini_Laundry\\View\\Dashboard.cs",
+              "RelativeToolTip": "Mini_Laundry\\View\\Dashboard.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T03:02:35.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\Mini_Laundry\\View\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Mini_Laundry\\View\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\Mini_Laundry\\View\\Dashboard.cs [Design]",
+              "RelativeToolTip": "Mini_Laundry\\View\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T02:50:18.489Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Main.Designer.cs",
               "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\Mini_Laundry\\Main.Designer.cs",
               "RelativeDocumentMoniker": "Mini_Laundry\\Main.Designer.cs",
               "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\Mini_Laundry\\Main.Designer.cs",
               "RelativeToolTip": "Mini_Laundry\\Main.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T01:52:13.518Z",
               "EditorCaption": ""
@@ -45,14 +78,14 @@
               "RelativeDocumentMoniker": "Mini_Laundry\\Main.cs",
               "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\Mini_Laundry\\Main.cs",
               "RelativeToolTip": "Mini_Laundry\\Main.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA5wCgAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA3wCoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T01:52:07.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\Mini_Laundry\\Mini_Laundry\\Main.cs",
               "RelativeDocumentMoniker": "Mini_Laundry\\Main.cs",

@@ -8,3 +8,6 @@ C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mi
 C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.csproj.CoreCompileInputs.cache
 C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.exe
 C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.pdb
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\bin\Debug\System.Data.SQLite.dll
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.View.Dashboard.resources
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Lau.3F2E2940.Up2Date

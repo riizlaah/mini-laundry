@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mini_Laundry.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +39,11 @@ namespace Mini_Laundry
                 MessageBox.Show("Password salah.");
                 return;
             }
-            MessageBox.Show("Login Berhasil!");
+            Dashboard dashboard = new Dashboard(this);
+            this.Hide();
+            textBox1.Text = "";
+            textBox2.Text = "";
+            dashboard.Show();
         }
     }
 }
