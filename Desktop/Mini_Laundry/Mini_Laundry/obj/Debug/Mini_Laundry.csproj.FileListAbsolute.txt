@@ -1,0 +1,10 @@
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\bin\Debug\Mini_Laundry.exe.config
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\bin\Debug\Mini_Laundry.exe
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\bin\Debug\Mini_Laundry.pdb
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.csproj.AssemblyReference.cache
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.Main.resources
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.Properties.Resources.resources
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.csproj.GenerateResource.cache
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.csproj.CoreCompileInputs.cache
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.exe
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.pdb
