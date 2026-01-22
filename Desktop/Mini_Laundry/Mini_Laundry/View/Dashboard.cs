@@ -15,21 +15,39 @@ namespace Mini_Laundry.View
     {
         Main mainForm;
         MainDashboard mainDashboard;
+        ManageEmployee manageEmployee;
+        bool logout = false;
         public Dashboard(Main main)
         {
-            this.mainForm = main;
-            this.mainDashboard = new MainDashboard();
+            mainForm = main;
+            mainDashboard = new MainDashboard();
+            manageEmployee = new ManageEmployee();
+            manageEmployee.Hide();
             InitializeComponent();
-            DataTable data = DataConnection.getData("SELECT * FROM employee");
-            DataRow first = data.Rows[0];
-            this.mainDashboard.sayHello(first["name"].ToString());
-            panel1.Controls.Add(this.mainDashboard);
+            mainDashboard.sayHello(DataConnection.currUser["name"].ToString());
+            panel1.Controls.Add(mainDashboard);
+            panel1.Controls.Add(manageEmployee);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            this.mainForm.Show();
-            this.Close();
+            mainForm.Show();
+            logout = true;
+            Close();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            manageEmployee.Show();
+            mainDashboard.Hide();
+        }
+
+        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(!logout)
+            {
+                mainForm.Close();
+            }
         }
     }
 }

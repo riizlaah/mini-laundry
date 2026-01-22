@@ -10,6 +10,7 @@ namespace Mini_Laundry.Helper
 {
     class DataConnection
     {
+        public static DataRow currUser;
         private static string connStr = "Data Source=DESKTOP-HQTH6PB\\SQLEXPRESS;Initial Catalog=laundryApp;Integrated Security=True;TrustServerCertificate=True;";
         public static SqlConnection getConn()
         {
@@ -25,13 +26,13 @@ namespace Mini_Laundry.Helper
                 return dt;
             }
         }
-        public static void execQuery(string query)
+        public static int execQuery(string query)
         {
             using (SqlConnection conn = getConn())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.ExecuteNonQuery();
+                return cmd.ExecuteNonQuery();
             }
         }
     }

@@ -12,3 +12,6 @@ C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\bin\Debug\Sy
 C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.View.Dashboard.resources
 C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Lau.3F2E2940.Up2Date
 C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.View.MainDashboard.resources
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.View.ManageEmployee.resources
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.View.AddEmployeeForm.resources
+C:\Users\galih\repos\mini-laundry\Desktop\Mini_Laundry\Mini_Laundry\obj\Debug\Mini_Laundry.View.EditEmployeeForm.resources

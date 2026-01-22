@@ -1,4 +1,5 @@
-﻿using Mini_Laundry.View;
+﻿using Mini_Laundry.Helper;
+using Mini_Laundry.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,6 @@ namespace Mini_Laundry
 {
     public partial class Main : Form
     {
-        private string email = "admin@hekerd.org";
-        private string password = "password";
         public Main()
         {
             InitializeComponent();
@@ -29,16 +28,18 @@ namespace Mini_Laundry
         {
             if (textBox1 == null) return;
             if (textBox2 == null) return;
-            if (textBox1.Text != this.email)
+            DataTable user = DataConnection.getData($"SELECT * FROM employees WHERE email = '{textBox1.Text}'");
+            if (user.Rows.Count == 0)
             {
-                MessageBox.Show("Email salah.");
+                MessageBox.Show("Akun tidak ditemukan!");
                 return;
             }
-            if (textBox2.Text != this.password)
+            if (user.Rows[0]["password"].ToString() != textBox2.Text)
             {
-                MessageBox.Show("Password salah.");
+                MessageBox.Show("Password salah!");
                 return;
             }
+            DataConnection.currUser = user.Rows[0];
             Dashboard dashboard = new Dashboard(this);
             this.Hide();
             textBox1.Text = "";
