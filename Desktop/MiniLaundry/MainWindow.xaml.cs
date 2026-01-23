@@ -26,32 +26,22 @@ namespace testWPF
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            if (email.Text.Length == 0)
+            if (email.Text.Length == 0 || password.Password.Length == 0)
             {
-                MessageBox.Show("Email tidak boleh kosong!");
+                MessageBox.Show("Please Try Again, Your Data is Not Valid!");
                 return;
             }
-            if (password.Password.Length == 0)
-            {
-                MessageBox.Show("Password tidak boleh kosong!");
-                return;
-            }
-            List<Employee> emps = _context.Employees.Where(em => em.Email == email.Text).ToList();
+            List<Employee> emps = _context.Employees.Where(em => em.Email == email.Text && em.Password == password.Password).ToList();
             if (emps.Count == 0)
             {
-                MessageBox.Show("Akun tidak ada!");
+                MessageBox.Show("Please Try Again, Your Data is Not Valid!");
                 return;
             }
             Employee emp = emps[0];
-            if(emp.Password != password.Password)
-            {
-                MessageBox.Show("Password salah!");
-                return;
-            }
             email.Text = "";
             password.Password = "";
             Dashboard dashb = new Dashboard(this, emp, _context);
-            this.Hide();
+            Hide();
             dashb.Show();
         }
     }
