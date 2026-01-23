@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\manageemployees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\manageemployees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\manageemployees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\manageemployees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\models\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\models\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManageEmployees.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageEmployees.xaml.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ManageEmployees.xaml.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageEmployees.xaml.cs",
+              "RelativeToolTip": "MiniLaundry\\Views\\ManageEmployees.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:23:42.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManageEmployees.xaml",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageEmployees.xaml",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ManageEmployees.xaml",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageEmployees.xaml*",
+              "RelativeToolTip": "MiniLaundry\\Views\\ManageEmployees.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-23T00:21:54.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\App.xaml.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\App.xaml.cs",
+              "RelativeToolTip": "MiniLaundry\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:14:50.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\DBHelper.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Models\\DBHelper.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\DBHelper.cs",
+              "RelativeToolTip": "MiniLaundry\\Models\\DBHelper.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:38:27.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\Dashboard.xaml.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\Dashboard.xaml.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\Dashboard.xaml.cs",
+              "RelativeToolTip": "MiniLaundry\\Views\\Dashboard.xaml.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA7wCcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:25:14.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.xaml",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\Dashboard.xaml",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\Dashboard.xaml",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\Dashboard.xaml",
+              "RelativeToolTip": "MiniLaundry\\Views\\Dashboard.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-23T00:25:10.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\Employee.cs",
+              "RelativeToolTip": "MiniLaundry\\Models\\Employee.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:21:29.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MiniLaundry\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwDMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:31:35.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Job.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\Job.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Models\\Job.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\Job.cs",
+              "RelativeToolTip": "MiniLaundry\\Models\\Job.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:33:01.989Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
