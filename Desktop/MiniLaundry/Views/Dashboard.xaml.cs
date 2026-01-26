@@ -40,6 +40,7 @@ namespace testWPF.Views
             mngCustomers = new ManageCustomers(DBH);
             mngPackages = new ManagePackages(DBH);
             mngServTransac = new ManageServTransac(DBH);
+            mngServTransac.currUser = _currUser;
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += clockTick;

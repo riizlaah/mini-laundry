@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MiniLaundry.Models;
+using MiniLaundry.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -28,169 +29,78 @@ namespace testWPF.Views
         private DBHelper DBHelper;
         private ObservableCollection<DetailTransaction> DetailTransacs { get; set; } = new ObservableCollection<DetailTransaction>();
         private List<Customer> Customers { get; set; }
+        private int custId = -1;
+        public Employee currUser = null!;
         public ManageServTransac(DBHelper DBH)
         {
             DBHelper = DBH;
             InitializeComponent();
-            RefreshData();
             serviceName.ItemsSource = DBH.Services.ToList();
             serviceTable.ItemsSource = DetailTransacs;
             Customers = DBH.Customers.ToList();
         }
-        private void toggleDetail(bool visib, bool resetInput = false)
+
+        private void updateDetail()
         {
-            //detailPanel.Visibility = visib ? Visibility.Visible : Visibility.Collapsed;
-            //tambah.Visibility = visib ? Visibility.Collapsed : Visibility.Visible;
-            //if (resetInput)
-            //{
-            //    name.Text = "";
-            //    category.SelectedIndex = -1;
-            //    unit.SelectedIndex = -1;
-            //    price.Text = "";
-            //    duration.Text = "";
-            //}
-        }
-
-        private void AddEmployee(object sender, RoutedEventArgs e)
-        {
-            //editing = false;
-            toggleDetail(true, true);
-        }
-
-        private void EditEmployee(object sender, RoutedEventArgs e)
-        {
-            //if (serviceTable.SelectedItem == null)
-            //{
-            //    MessageBox.Show("Please, select One Row!");
-            //    return;
-            //}
-            //editing = true;
-            //Service serv = GetSelectedService();
-            //name.Text = serv.Name;
-            //category.SelectedValue = serv.CategoryId;
-            //unit.SelectedValue = serv.UnitId;
-            //price.Text = serv.Price.ToString();
-            //duration.Text = serv.EstimationDuration.ToString();
-            //toggleDetail(true);
-        }
-
-        private void DeleteEmployee(object sender, RoutedEventArgs e)
-        {
-            if(serviceTable.SelectedItem == null)
-            {
-                MessageBox.Show("Please, select One Row!");
-                return;
-            }
-            Service serv = GetSelectedService();
-            MessageBoxResult res = MessageBox.Show($"Are you Sure Delete {serv.Name}", "Yes No", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (res == MessageBoxResult.Yes)
-            {
-                DBHelper.Services.Remove(serv);
-                DBHelper.SaveChanges();
-                RefreshData();
-            }
-        }
-
-        private Service GetSelectedService()
-        {
-            return serviceTable.SelectedItem as Service;
-        }
-
-        private void Refresh(object sender, RoutedEventArgs e)
-        {
-            RefreshData();
-        }
-
-        private void RefreshData(string? src = null)
-        {
-            if(src == null)
-            {
-                serviceTable.ItemsSource = DBHelper.Services.Include(e => e.Unit).Include(e => e.Category).AsSplitQuery().ToList();
-            } else
-            {
-                serviceTable.ItemsSource = DBHelper.Services.Include(e => e.Unit).Include(e => e.Category).Where(e => 
-                    EF.Functions.Like(e.Name, $"%{src}%") || EF.Functions.Like(e.Category.Name, $"%{src}%") || 
-                    EF.Functions.Like(e.Unit.Name, $"%{src}%") || Convert.ToString(e.Price).Contains(src)
-                    ).AsSplitQuery().ToList();
-            }
-        }
-
-        private void saveEmployee(object sender, RoutedEventArgs e)
-        {
-            //if (name.Text.Length == 0)
-            //{
-            //    MessageBox.Show("Nama tidak boleh kosong!");
-            //    return;
-            //}
-            //if (!price.Text.All(Char.IsDigit))
-            //{
-            //    MessageBox.Show("Harga tidak valid!");
-            //    return;
-            //}
-            //if (!duration.Text.All(Char.IsDigit))
-            //{
-            //    MessageBox.Show("Estimasi Durasi tidak valid!");
-            //    return;
-            //}
-            //if (category.SelectedValue == null)
-            //{
-            //    MessageBox.Show("Layanan harus memiliki kategori!");
-            //    return;
-            //}
-            //if (unit.SelectedValue == null)
-            //{
-            //    MessageBox.Show("Layanan harus memiliki unit!");
-            //    return;
-            //}
-            //if (!editing)
-            //{
-            //    DBHelper.Services.Add(new Service
-            //    {
-            //        Name = name.Text,
-            //        UnitId = (int)unit.SelectedValue,
-            //        CategoryId = (int)unit.SelectedValue,
-            //        Price = int.Parse(price.Text),
-            //        EstimationDuration = int.Parse(duration.Text)
-            //    });
-            //    DBHelper.SaveChanges();
-
-            //} else
-            //{
-            //    var serv = DBHelper.Services.FirstOrDefault(e => e.Id == GetSelectedService().Id);
-            //    if (serv != null)
-            //    {
-            //        serv.Name = name.Text;
-            //        serv.UnitId = (int)unit.SelectedValue;
-            //        serv.CategoryId = (int)category.SelectedValue;
-            //        serv.Price = int.Parse(price.Text);
-            //        serv.EstimationDuration = int.Parse(duration.Text);
-
-            //        DBHelper.SaveChanges();
-            //    }
-            //}
-            //toggleDetail(false);
-            //editing = false;
-            //RefreshData();
-        }
-
-        private void hideDetail(object sender, RoutedEventArgs e)
-        {
-            toggleDetail(false);
-        }
-
-        private void TrySearch(object sender, TextChangedEventArgs e)
-        {
-            //RefreshData(search.Text);
+            int totalPrice = DetailTransacs.Sum(d => d.Price);
+            estPrice.Content = string.Format("{0:Rp#,##0;(Rp#,##0);''}", totalPrice);
+            int totalTime = Convert.ToInt32(DetailTransacs.Sum(d => d.Service.EstimationDuration * d.TotalUnit));
+            estTime.Content = $"{totalTime} Jam";
         }
 
         private void AddNewUser(object sender, RoutedEventArgs e)
         {
-
+            AddUser addUserDialog = new AddUser(DBHelper);
+            bool? res = addUserDialog.ShowDialog();
+            if(res == true)
+            {
+                Customers = DBHelper.Customers.ToList();
+                Customer newCust = Customers.Last();
+                suggestList.ItemsSource = Customers;
+                suggestList.SelectedIndex = Customers.Count - 1;
+                ApplySuggestion();
+            }
         }
 
         private void save(object sender, RoutedEventArgs e)
         {
-            
+            if(phoneNum.Text.Length == 0 || address.Text.Length == 0 || custName.Text.Length == 0)
+            {
+                MessageBox.Show("Please, Fill Customer Section!");
+                return;
+            }
+            if(DetailTransacs.Count < 1)
+            {
+                MessageBox.Show("Layanan tidak boleh kosong!");
+                return;
+            }
+            int totalHours = Convert.ToInt32(DetailTransacs.Sum(d => d.Service.EstimationDuration * d.TotalUnit));
+            HeaderTransaction hdrTransac = new HeaderTransaction
+            {
+                CustomerId = custId,
+                CreatedAt = DateTime.Now,
+                EmployeeId = currUser.Id,
+                CompleteEstDate = DateTime.Now.AddHours(totalHours)
+                //Customer = C
+            };
+            DBHelper.HeaderTransactions.Add(hdrTransac);
+            DBHelper.SaveChanges();
+            foreach (DetailTransaction dtlTransac in DetailTransacs)
+            {
+                dtlTransac.HeaderTransactionId = hdrTransac.Id;
+                DBHelper.DetailTransactions.Add(dtlTransac);
+            }
+            DBHelper.SaveChanges();
+            MessageBox.Show("Transaction Added!");
+            serviceTable.ItemsSource = null;
+            DetailTransacs.Clear();
+            phoneNum.Text = "";
+            address.Text = "";
+            custName.Text = "";
+            unit.Text = "";
+            serviceName.SelectedIndex = -1;
+            estPrice.Content = "Rp0";
+            estTime.Content = "0 Jam";
         }
 
         private void addService(object sender, RoutedEventArgs e)
@@ -220,6 +130,7 @@ namespace testWPF.Views
                 Price = (int)((serviceName.SelectedItem as Service).Price * unitVal),
             };
             DetailTransacs.Add(dtlTransac);
+            updateDetail();
         }
 
         private void delService(object sender, RoutedEventArgs e)
@@ -229,7 +140,12 @@ namespace testWPF.Views
                 MessageBox.Show("Please, select One Row!");
                 return;
             }
-            DetailTransacs.Remove(serviceTable.SelectedItem as DetailTransaction);
+            MessageBoxResult res = MessageBox.Show("Yakin?", "Yes No", MessageBoxButton.YesNo);
+            if(res == MessageBoxResult.Yes)
+            {
+                bool r2 = DetailTransacs.Remove(serviceTable.SelectedItem as DetailTransaction);
+                if(r2) updateDetail();
+            }
         }
 
         private void suggestOnKeyDown(object sender, KeyEventArgs e)
@@ -318,6 +234,7 @@ namespace testWPF.Views
                 phoneNum.CaretIndex = phoneNum.Text.Length;
                 HideSuggestions();
                 phoneNum.Focus();
+                custId = cust.Id;
             }
 
         }

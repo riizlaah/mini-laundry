@@ -49,7 +49,7 @@
                     <Label Grid.Column="3" Content="Total" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
                     <Label Grid.Column="3" Content="Estimasi Waktu" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
                     <Label x:Name="estPrice" Grid.Column="3" Content="Rp0" HorizontalAlignment="Left" Margin="104,33,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="98" HorizontalContentAlignment="Right"/>
-                    <Label x:Name="estTime" Grid.Column="3" Content="14 Jam" HorizontalAlignment="Left" Margin="104,86,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="98" FontSize="10" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="estTime" Grid.Column="3" Content="0 Jam" HorizontalAlignment="Left" Margin="104,86,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="98" FontSize="10" HorizontalContentAlignment="Right"/>
 
                 </Grid>
             </ContentControl>
@@ -58,7 +58,7 @@
                     <DataGridTextColumn Header="Nama Layanan" Binding="{Binding Service.Name}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Harga" Binding="{Binding Service.Price, StringFormat='C0', ConverterCulture='id-ID'}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Total Unit" Binding="{Binding TotalUnit}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Estimasi Durasi" Binding="{Binding Service.EstimationDuration}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Estimasi Durasi per Unit" Binding="{Binding Service.EstimationDuration}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Subtotal" Binding="{Binding Price, StringFormat='C0', ConverterCulture='id-ID'}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
