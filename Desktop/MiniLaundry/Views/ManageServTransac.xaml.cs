@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using testWPF.Migrations;
 
 namespace testWPF.Views
 {
@@ -24,7 +26,8 @@ namespace testWPF.Views
     public partial class ManageServTransac : UserControl
     {
         private DBHelper DBHelper;
-        private List<DetailTransaction> DetailTransacs { get; set; } = new List<DetailTransaction>();
+        private ObservableCollection<DetailTransaction> DetailTransacs { get; set; } = new ObservableCollection<DetailTransaction>();
+        private List<Customer> Customers { get; set; }
         public ManageServTransac(DBHelper DBH)
         {
             DBHelper = DBH;
@@ -32,7 +35,7 @@ namespace testWPF.Views
             RefreshData();
             serviceName.ItemsSource = DBH.Services.ToList();
             serviceTable.ItemsSource = DetailTransacs;
-
+            Customers = DBH.Customers.ToList();
         }
         private void toggleDetail(bool visib, bool resetInput = false)
         {
@@ -202,7 +205,8 @@ namespace testWPF.Views
                 MessageBox.Show("The number of service is not valid");
                 return;
             }
-            float unitVal = float.Parse(unit.Text);
+            float unitVal = float.Parse(unit.Text, CultureInfo.InvariantCulture);
+            Debug.WriteLine(unitVal);
             if (unitVal < 1)
             {
                 MessageBox.Show("The number of service is not valid");
@@ -210,8 +214,9 @@ namespace testWPF.Views
             }
             DetailTransaction dtlTransac = new DetailTransaction
             {
+                Service = serviceName.SelectedItem as Service,
                 ServiceId = (int)serviceName.SelectedValue,
-                TotalUnit = float.Parse(unit.Text),
+                TotalUnit = unitVal,
                 Price = (int)((serviceName.SelectedItem as Service).Price * unitVal),
             };
             DetailTransacs.Add(dtlTransac);
@@ -225,6 +230,96 @@ namespace testWPF.Views
                 return;
             }
             DetailTransacs.Remove(serviceTable.SelectedItem as DetailTransaction);
+        }
+
+        private void suggestOnKeyDown(object sender, KeyEventArgs e)
+        {
+            if (!suggestList.IsVisible) return;
+            switch (e.Key)
+            {
+                case Key.Tab:
+                case Key.Enter:
+                    ApplySuggestion();
+                    e.Handled = true; break;
+                case Key.Up:
+                    if(suggestList.SelectedIndex == 0)
+                    {
+                        phoneNum.Focus();
+                        e.Handled = true;
+                    }
+                    break;
+                case Key.Escape:
+                    HideSuggestions();
+                    phoneNum.Focus();
+                    e.Handled = true;
+                    break;
+            }
+        }
+
+        private void suggestOnDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ApplySuggestion();
+        }
+
+        private void phoneNumOnChanged(object sender, TextChangedEventArgs e)
+        {
+            string input = phoneNum.Text.Trim();
+            if(string.IsNullOrWhiteSpace(input))
+            {
+                HideSuggestions();
+                return;
+            }
+            var suggestions = Customers.Where(e => e.PhoneNum.Contains(input)).ToList();
+            ShowSuggestions(suggestions);
+        }
+
+        private void ShowSuggestions(List<Customer> items)
+        {
+            if(items.Any())
+            {
+                suggestList.ItemsSource = items;
+                suggestList.Visibility = Visibility.Visible;
+                suggestList.SelectedIndex = 0;
+            } else
+            {
+                HideSuggestions();
+            }
+        }
+
+        private void HideSuggestions()
+        {
+            suggestList.Visibility = Visibility.Collapsed;
+        }
+
+        private void phoneNumPrevKeyDown(object sender, KeyEventArgs e)
+        {
+            if (!suggestList.IsVisible) return;
+            switch (e.Key)
+            {
+                case Key.Down:
+                    suggestList.Focus();
+                    suggestList.SelectedIndex = 0;
+                    e.Handled = true; break;
+                case Key.Tab:
+                case Key.Enter:
+                    ApplySuggestion();
+                    e.Handled = true; break;
+            }
+        }
+
+        private void ApplySuggestion()
+        {
+            if(suggestList.SelectedItem != null)
+            {
+                Customer cust = suggestList.SelectedItem as Customer;
+                phoneNum.Text = cust.PhoneNum;
+                custName.Text = cust.Name;
+                address.Text = cust.Address;
+                phoneNum.CaretIndex = phoneNum.Text.Length;
+                HideSuggestions();
+                phoneNum.Focus();
+            }
+
         }
     }
 }

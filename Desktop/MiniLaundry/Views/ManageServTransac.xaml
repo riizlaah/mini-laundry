@@ -19,26 +19,33 @@
                         <ColumnDefinition Width="341*"></ColumnDefinition>
                         <ColumnDefinition Width="200*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="unit" HorizontalAlignment="Right" Margin="0,37,362,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="18" TabIndex="6" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="unit" HorizontalAlignment="Right" Margin="0,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" Height="18" TabIndex="6"/>
                     <Label Content="Nama Layanan" Margin="2,10,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" RenderTransformOrigin="-0.009,0.652" HorizontalAlignment="Left" Width="90"/>
-                    <ComboBox x:Name="serviceName" HorizontalAlignment="Right" Margin="0,10,362,0" VerticalAlignment="Top" Width="115" SelectedIndex="0" Height="22" DisplayMemberPath="Name" SelectedValuePath="Id" TabIndex="12" Grid.ColumnSpan="3"  />
+                    <ComboBox x:Name="serviceName" HorizontalAlignment="Right" Margin="0,10,0,0" VerticalAlignment="Top" Width="115" SelectedIndex="0" Height="22" DisplayMemberPath="Name" SelectedValuePath="Id" TabIndex="12"  />
                     <Label Content="Total Unit" HorizontalAlignment="Left" Margin="2,37,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" Width="74" RenderTransformOrigin="-0.009,0.652"/>
 
-                    <Button Content="Kirim" Margin="0,114,0,0" VerticalAlignment="Top" Padding="12,4,12,4" Height="26" Click="save" Grid.Column="3" RenderTransformOrigin="0.503,0.205" TabIndex="14"/>
-                    <GroupBox Grid.Column="2" Header="Pelanggan" Padding="4,4,4,4">
+                    <Button Content="Kirim" Margin="5,114,5,0" VerticalAlignment="Top" Padding="12,4,12,4" Height="26" Click="save" Grid.Column="3" RenderTransformOrigin="0.503,0.205" TabIndex="14"/>
+                    <GroupBox Grid.Column="2" Header="Pelanggan" Margin="5,5,5,0">
                         <Grid>
                             <Label Content="No. HP" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" Width="97" RenderTransformOrigin="-0.009,0.652"/>
-                            <TextBox x:Name="address" HorizontalAlignment="Right" Margin="0,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" Height="59" TabIndex="9"/>
+                            <TextBox x:Name="address" IsReadOnly="True" HorizontalAlignment="Right" Margin="0,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" Height="59" TabIndex="10" />
                             <Label Content="Alamat" HorizontalAlignment="Left" Margin="0,59,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" Width="60" RenderTransformOrigin="-0.009,0.652"/>
-                            <TextBox x:Name="custName" HorizontalAlignment="Right" Margin="0,35,2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" Height="18" TabIndex="8"/>
-                            <Label Content="Nama Pelanggan" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" Width="97" RenderTransformOrigin="-0.009,0.652"/>
-                            <TextBox x:Name="phoneNum" HorizontalAlignment="Right" Margin="0,10,108,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="18" TabIndex="8"/>
-                            <Label HorizontalAlignment="Left" Margin="234,8,0,85" FontSize="9">
+                            <TextBox x:Name="custName" IsReadOnly="True" HorizontalAlignment="Right" Margin="0,35,2,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="18" TabIndex="9"/>
+                            <Label Content="Nama Pelanggan" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" Width="90" RenderTransformOrigin="-0.009,0.652"/>
+                            <TextBox x:Name="phoneNum" HorizontalAlignment="Right" Margin="0,10,93,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="18" TabIndex="8" TextChanged="phoneNumOnChanged" PreviewKeyDown="phoneNumPrevKeyDown"/>
+                            <Label HorizontalAlignment="Right" Margin="0,8,7,85" FontSize="9">
                                 <Hyperlink Click="AddNewUser">Tidak ada? Tambah</Hyperlink>
                             </Label>
+                            <ListBox x:Name="suggestList" MaxHeight="60" MaxWidth="140" Visibility="Collapsed" PreviewKeyDown="suggestOnKeyDown" MouseDoubleClick="suggestOnDoubleClick">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding PhoneNum}" />
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
                         </Grid>
                     </GroupBox>
-                    <Button Content="Tambah" Margin="101,0,362,0" VerticalAlignment="Center" Padding="12,4,12,4" Height="26" Click="addService" RenderTransformOrigin="0.503,0.205" TabIndex="14" Grid.ColumnSpan="3"/>
+                    <Button Content="Tambah" Margin="0,60,0,0" VerticalAlignment="Top" Padding="12,4,12,4" Height="26" Click="addService" RenderTransformOrigin="0.503,0.205" TabIndex="14" HorizontalAlignment="Right" Width="115"/>
                     <Label Grid.Column="3" Content="Total" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
                     <Label Grid.Column="3" Content="Estimasi Waktu" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
                     <Label x:Name="estPrice" Grid.Column="3" Content="Rp0" HorizontalAlignment="Left" Margin="104,33,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="98" HorizontalContentAlignment="Right"/>
