@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniLaundry.Models;
 
@@ -11,9 +12,11 @@ using MiniLaundry.Models;
 namespace testWPF.Migrations
 {
     [DbContext(typeof(DBHelper))]
-    partial class DBHelperModelSnapshot : ModelSnapshot
+    [Migration("20260126034205_packages")]
+    partial class packages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,32 +77,6 @@ namespace testWPF.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("MiniLaundry.Models.DetailPackage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("PackageId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ServiceId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TotalUnitService")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PackageId");
-
-                    b.HasIndex("ServiceId");
-
-                    b.ToTable("DetailPackages");
                 });
 
             modelBuilder.Entity("MiniLaundry.Models.Employee", b =>
@@ -194,33 +171,6 @@ namespace testWPF.Migrations
                         });
                 });
 
-            modelBuilder.Entity("MiniLaundry.Models.Package", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Duration")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Packages");
-                });
-
             modelBuilder.Entity("MiniLaundry.Models.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -294,25 +244,6 @@ namespace testWPF.Migrations
                         });
                 });
 
-            modelBuilder.Entity("MiniLaundry.Models.DetailPackage", b =>
-                {
-                    b.HasOne("MiniLaundry.Models.Package", "Package")
-                        .WithMany("detailPackages")
-                        .HasForeignKey("PackageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MiniLaundry.Models.Service", "Service")
-                        .WithMany()
-                        .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Package");
-
-                    b.Navigation("Service");
-                });
-
             modelBuilder.Entity("MiniLaundry.Models.Employee", b =>
                 {
                     b.HasOne("MiniLaundry.Models.Job", "Job")
@@ -346,11 +277,6 @@ namespace testWPF.Migrations
             modelBuilder.Entity("MiniLaundry.Models.Job", b =>
                 {
                     b.Navigation("Employees");
-                });
-
-            modelBuilder.Entity("MiniLaundry.Models.Package", b =>
-                {
-                    b.Navigation("detailPackages");
                 });
 #pragma warning restore 612, 618
         }

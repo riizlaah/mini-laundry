@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:testWPF.Views"
         mc:Ignorable="d"
-        Title="Dashboard" Height="450" Width="800">
+        Title="Dashboard" Height="650" Width="900">
     <Grid>
         <DockPanel Grid.Row="1">
             <DockPanel DockPanel.Dock="Top" Background="DeepSkyBlue">
@@ -33,7 +33,13 @@
                     <Image Source="/Assets/user-cog.png"  Width="24" Margin="5,5,5,5"/>
                 </Button>
                 <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="manageServiceClicked">
-                    <Image Source="/Assets/brush-cleaning.png"  Width="24" Margin="5,5,5,5"/>
+                    <Image Source="/Assets/shirt.png"  Width="24" Margin="5,5,5,5"/>
+                </Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="manageCustomersClicked">
+                    <Image Source="/Assets/users-round.png"  Width="24" Margin="5,5,5,5"/>
+                </Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="managePackagesClicked">
+                    <Image Source="/Assets/users-round.png"  Width="24" Margin="5,5,5,5"/>
                 </Button>
             </StackPanel>
             <ContentControl x:Name="content1"></ContentControl>

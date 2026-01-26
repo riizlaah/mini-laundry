@@ -21,11 +21,11 @@ namespace testWPF.Views
     /// <summary>
     /// Interaction logic for ManageEmployees.xaml
     /// </summary>
-    public partial class ManageService : UserControl
+    public partial class ManageServices : UserControl
     {
         private DBHelper DBHelper;
         private bool editing = false;
-        public ManageService(DBHelper DBH)
+        public ManageServices(DBHelper DBH)
         {
             DBHelper = DBH;
             InitializeComponent();

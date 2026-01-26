@@ -10,7 +10,8 @@
 
   <ItemGroup>
     <None Remove="Assets\refresh-cw.png" />
-    <None Remove="Views\brush-cleaning.png" />
+    <None Remove="Assets\shirt.png" />
+    <None Remove="Assets\users-round.png" />
     <None Remove="Views\log-out.png" />
     <None Remove="Views\user-cog.png" />
   </ItemGroup>
@@ -27,8 +28,9 @@
   <ItemGroup>
     <Resource Include="Assets\log-out.png" />
     <Resource Include="Assets\refresh-cw.png" />
+    <Resource Include="Assets\shirt.png" />
     <Resource Include="Assets\user-cog.png" />
-    <Resource Include="Assets\brush-cleaning.png" />
+    <Resource Include="Assets\users-round.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,7 +38,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\ManageService.xaml.cs">
+    <Compile Update="Views\ManageCustomers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ManagePackages.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ManageServices.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

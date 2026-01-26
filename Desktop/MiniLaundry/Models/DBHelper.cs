@@ -14,6 +14,9 @@ namespace MiniLaundry.Models
         public DbSet<Unit> Units { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Package> Packages { get; set; }
+        public DbSet<DetailPackage> DetailPackages { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(

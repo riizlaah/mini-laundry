@@ -26,14 +26,18 @@ namespace testWPF.Views
         bool _logout = false;
         Employee _currUser;
         ManageEmployees mngEmployees;
-        ManageService mngService;
+        ManageServices mngService;
+        ManageCustomers mngCustomers;
+        ManagePackages mngPackages;
         public Dashboard(MainWindow mWindow, Employee cUser, DBHelper DBH)
         {
             _currUser = cUser;
             Debug.WriteLine(cUser.Job);
             _mainWindow = mWindow;
             mngEmployees = new ManageEmployees(DBH);
-            mngService = new ManageService(DBH);
+            mngService = new ManageServices(DBH);
+            mngCustomers = new ManageCustomers(DBH);
+            mngPackages = new ManagePackages(DBH);
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += clockTick;
@@ -77,6 +81,16 @@ namespace testWPF.Views
         private void manageServiceClicked(object sender, RoutedEventArgs e)
         {
             content1.Content = mngService;
+        }
+
+        private void manageCustomersClicked(object sender, RoutedEventArgs e)
+        {
+            content1.Content = mngCustomers;
+        }
+
+        private void managePackagesClicked(object sender, RoutedEventArgs e)
+        {
+            content1.Content = mngPackages;
         }
     }
 }
