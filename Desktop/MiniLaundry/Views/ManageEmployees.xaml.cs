@@ -24,18 +24,14 @@ namespace testWPF.Views
     public partial class ManageEmployees : UserControl
     {
         private DBHelper DBHelper;
-        public ObservableCollection<Employee> Employees { get; set; } = new ObservableCollection<Employee>();
         private bool editing = false;
-        private int currId = -1;
         public ManageEmployees(DBHelper DBH)
         {
             DBHelper = DBH;
-            Employees = DBHelper.Employees.Local.ToObservableCollection();
-            RefreshData();
             InitializeComponent();
+            RefreshData();
             detailPanel.Visibility = Visibility.Collapsed;
             pekerjaan.ItemsSource = DBH.Jobs.ToList();
-            employeeTable.ItemsSource = Employees;
         }
         private void toggleDetail(bool visib, bool resetInput = false)
         {
@@ -51,14 +47,14 @@ namespace testWPF.Views
                 no_hp.Text = "";
                 gaji.Text = "";
                 pekerjaan.SelectedIndex = -1;
-                alamat.Document.Blocks.Clear();
+                alamat.Text = "";
             }
         }
 
         private void AddEmployee(object sender, RoutedEventArgs e)
         {
-            toggleDetail(true, true);
             editing = false;
+            toggleDetail(true, true);
         }
 
         private void EditEmployee(object sender, RoutedEventArgs e)
@@ -68,6 +64,7 @@ namespace testWPF.Views
                 MessageBox.Show("Please, select One Row!");
                 return;
             }
+            editing = true;
             Employee emp = GetSelectedEmp();
             nama.Text = emp.Name;
             email.Text = emp.Email;
@@ -77,7 +74,7 @@ namespace testWPF.Views
             no_hp.Text = emp.PhoneNum;
             gaji.Text = emp.Salary.ToString();
             pekerjaan.SelectedValue = emp.Job.Id;
-            alamat.Document.Blocks.Add(new Paragraph(new Run(emp.Address)));
+            alamat.Text = emp.Address;
             toggleDetail(true);
         }
 
@@ -89,14 +86,12 @@ namespace testWPF.Views
                 return;
             }
             Employee emp = GetSelectedEmp();
-            MessageBoxResult res = MessageBox.Show($"Are you Sure Delete {emp.Name}", "Konfirmasi Hapus", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult res = MessageBox.Show($"Are you Sure Delete {emp.Name}", "Yes No", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (res == MessageBoxResult.Yes)
             {
                 DBHelper.Employees.Remove(emp);
                 DBHelper.SaveChanges();
-            } else
-            {
-                
+                RefreshData();
             }
         }
 
@@ -114,12 +109,12 @@ namespace testWPF.Views
         {
             if(src == null)
             {
-                var _l = DBHelper.Employees.Include(e => e.Job).AsSplitQuery().ToList();
+                employeeTable.ItemsSource = DBHelper.Employees.Include(e => e.Job).AsSplitQuery().ToList();
             } else
             {
-                var _l = DBHelper.Employees.Where(e => 
-                    EF.Functions.Contains(e.Name, src) || EF.Functions.Contains(e.Email, src) || 
-                    EF.Functions.Contains(e.PhoneNum, src)
+                employeeTable.ItemsSource = DBHelper.Employees.Where(e => 
+                    EF.Functions.Like(e.Name, $"%{src}%") || EF.Functions.Like(e.Email, $"%{src}%") || 
+                    EF.Functions.Like(e.PhoneNum, $"%{src}%")
                     ).Include(e => e.Job).AsSplitQuery().ToList();
             }
         }
@@ -167,17 +162,18 @@ namespace testWPF.Views
                 MessageBox.Show("Gaji harus berupa angka!");
                 return;
             }
-            if((new TextRange(alamat.Document.ContentStart, alamat.Document.ContentEnd)).Text.Length == 0)
+            if(alamat.Text.Length == 0)
             {
                 MessageBox.Show("Alamat tidak boleh kosong!");
                 return;
             }
             if (!editing)
             {
+                Debug.WriteLine("add");
                 DBHelper.Employees.Add(new Employee
                 {
                     Name = nama.Text,
-                    Address = (new TextRange(alamat.Document.ContentStart, alamat.Document.ContentEnd)).Text,
+                    Address = alamat.Text,
                     DateOfBirth = tgl_lahir.SelectedDate ?? new DateTime(2000, 1, 1),
                     Email = email.Text,
                     Password = password.Text,
@@ -189,12 +185,12 @@ namespace testWPF.Views
 
             } else
             {
-
-                Employee emp = DBHelper.Employees.Find(GetSelectedEmp().Id);
+                Debug.WriteLine("update");
+                var emp = DBHelper.Employees.FirstOrDefault(e => e.Id == GetSelectedEmp().Id);
                 if (emp != null)
                 {
                     emp.Name = nama.Text;
-                    emp.Address = (new TextRange(alamat.Document.ContentStart, alamat.Document.ContentEnd)).Text;
+                    emp.Address = alamat.Text;
                     emp.DateOfBirth = tgl_lahir.SelectedDate ?? new DateTime(2000, 1, 1);
                     emp.Email = email.Text;
                     emp.Password = password.Text;
@@ -206,6 +202,8 @@ namespace testWPF.Views
                 }
             }
             toggleDetail(false);
+            editing = false;
+            RefreshData();
         }
 
         private void hideDetail(object sender, RoutedEventArgs e)

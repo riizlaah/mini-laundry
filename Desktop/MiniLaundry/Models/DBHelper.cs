@@ -14,32 +14,25 @@ namespace MiniLaundry.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Server=(localdb)\mssqllocaldb;Database=laundryApp;Integrated Security=True;")
-                .UseSeeding((context, _) =>
-                {
-                    Job adminJob = new Job { Name = "Administrator" };
-                    context.Set<Job>().Add(adminJob);
-                    context.Set<Job>().Add(new Job { Name = "Pencuci" });
-                    context.Set<Job>().Add(new Job { Name = "Penyetrika" });
-                    context.Set<Employee>().Add(new Employee
-                    {
-                        Name = "Admin",
-                        Email = "admin@penatu.id",
-                        Password = "password",
-                        PhoneNum = "089988776655",
-                        Address = "Bumi",
-                        DateOfBirth = new DateTime(2000, 1, 1),
-                        Salary = 3000000,
-                        Job = adminJob
-
-                    });
-                    context.SaveChanges();
-                });
+                @"Server=(localdb)\mssqllocaldb;Database=laundryApp;Integrated Security=True;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            Job adminJob = new Job { Id = 1, Name = "Administrator" };
+            modelBuilder.Entity<Job>().HasData(adminJob, new Job { Id = 2, Name = "Pencuci" }, new Job { Id = 3, Name = "Penyetrika" });
+            modelBuilder.Entity<Employee>().HasData(new
+            {
+                Id = 1,
+                Name = "Admin",
+                Email = "admin@penatu.id",
+                Password = "p4s?",
+                PhoneNum = "+6289988776655",
+                Address = "Bumi",
+                DateOfBirth = new DateTime(2000, 1, 1),
+                Salary = 3000000m,
+                JobId = adminJob.Id
+            });
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Employee>().HasOne<Job>(e => e.Job).WithMany(j => j.Employees).HasForeignKey(e => e.JobId);
         }
     }
 }
