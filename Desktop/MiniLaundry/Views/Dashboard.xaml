@@ -32,6 +32,9 @@
                 <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="manageEmployeeClicked">
                     <Image Source="/Assets/user-cog.png"  Width="24" Margin="5,5,5,5"/>
                 </Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="manageServiceClicked">
+                    <Image Source="/Assets/brush-cleaning.png"  Width="24" Margin="5,5,5,5"/>
+                </Button>
             </StackPanel>
             <ContentControl x:Name="content1"></ContentControl>
         </DockPanel>

@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Assets\refresh-cw.png" />
+    <None Remove="Views\brush-cleaning.png" />
     <None Remove="Views\log-out.png" />
     <None Remove="Views\user-cog.png" />
   </ItemGroup>
@@ -27,10 +28,17 @@
     <Resource Include="Assets\log-out.png" />
     <Resource Include="Assets\refresh-cw.png" />
     <Resource Include="Assets\user-cog.png" />
+    <Resource Include="Assets\brush-cleaning.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\ManageService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

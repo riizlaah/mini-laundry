@@ -57,7 +57,7 @@
                     <DataGridTextColumn Header="Alamat" Binding="{Binding Address}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Tanggal Lahir" Binding="{Binding DateOfBirth, StringFormat='dd/MM/yyyy'}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Pekerjaan" Binding="{Binding Job.Name}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Gaji" Binding="{Binding Salary, StringFormat='C2', ConverterCulture='id-ID'}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Gaji" Binding="{Binding Salary, StringFormat='C0', ConverterCulture='id-ID'}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </DockPanel>

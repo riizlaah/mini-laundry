@@ -11,6 +11,9 @@ namespace MiniLaundry.Models
     {
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Unit> Units { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Service> Services { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
@@ -31,6 +34,17 @@ namespace MiniLaundry.Models
                 DateOfBirth = new DateTime(2000, 1, 1),
                 Salary = 3000000m,
                 JobId = adminJob.Id
+            });
+            modelBuilder.Entity<Unit>().HasData(new Unit { Id = 1, Name = "Kg" }, new Unit { Id = 2, Name = "m" });
+            modelBuilder.Entity<Category>().HasData(new Category { Id = 1, Name = "Kiloan" }, new Category { Id = 2, Name = "Meteran" });
+            modelBuilder.Entity<Service>().HasData(new Service
+            {
+                Id = 1,
+                CategoryId = 1,
+                UnitId = 1,
+                Name = "Cuci Kiloan",
+                Price = 20000,
+                EstimationDuration = 4
             });
             base.OnModelCreating(modelBuilder);
         }

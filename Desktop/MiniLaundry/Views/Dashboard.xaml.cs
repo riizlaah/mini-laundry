@@ -26,12 +26,14 @@ namespace testWPF.Views
         bool _logout = false;
         Employee _currUser;
         ManageEmployees mngEmployees;
+        ManageService mngService;
         public Dashboard(MainWindow mWindow, Employee cUser, DBHelper DBH)
         {
             _currUser = cUser;
             Debug.WriteLine(cUser.Job);
             _mainWindow = mWindow;
             mngEmployees = new ManageEmployees(DBH);
+            mngService = new ManageService(DBH);
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += clockTick;
@@ -70,6 +72,11 @@ namespace testWPF.Views
         private void emptyMenu(object sender, MouseButtonEventArgs e)
         {
             content1.Content = null;
+        }
+
+        private void manageServiceClicked(object sender, RoutedEventArgs e)
+        {
+            content1.Content = mngService;
         }
     }
 }
