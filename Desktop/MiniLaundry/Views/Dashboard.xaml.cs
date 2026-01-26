@@ -29,6 +29,7 @@ namespace testWPF.Views
         ManageServices mngService;
         ManageCustomers mngCustomers;
         ManagePackages mngPackages;
+        ManageServTransac mngServTransac;
         public Dashboard(MainWindow mWindow, Employee cUser, DBHelper DBH)
         {
             _currUser = cUser;
@@ -38,6 +39,7 @@ namespace testWPF.Views
             mngService = new ManageServices(DBH);
             mngCustomers = new ManageCustomers(DBH);
             mngPackages = new ManagePackages(DBH);
+            mngServTransac = new ManageServTransac(DBH);
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += clockTick;
@@ -91,6 +93,21 @@ namespace testWPF.Views
         private void managePackagesClicked(object sender, RoutedEventArgs e)
         {
             content1.Content = mngPackages;
+        }
+
+        private void manageServiceTransactionClicked(object sender, RoutedEventArgs e)
+        {
+            content1.Content = mngServTransac;
+        }
+
+        private void managePackageTransactionClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void viewTransactionClicked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

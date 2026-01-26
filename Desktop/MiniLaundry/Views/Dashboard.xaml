@@ -39,7 +39,16 @@
                     <Image Source="/Assets/users-round.png"  Width="24" Margin="5,5,5,5"/>
                 </Button>
                 <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="managePackagesClicked">
-                    <Image Source="/Assets/users-round.png"  Width="24" Margin="5,5,5,5"/>
+                    <Image Source="/Assets/package.png"  Width="24" Margin="5,5,5,5"/>
+                </Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="manageServiceTransactionClicked">
+                    <Image Source="/Assets/scroll-text.png"  Width="24" Margin="5,5,5,5"/>
+                </Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="managePackageTransactionClicked">
+                    <Image Source="/Assets/book-text.png"  Width="24" Margin="5,5,5,5"/>
+                </Button>
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Click="viewTransactionClicked">
+                    <Image Source="/Assets/clipboard-list.png"  Width="24" Margin="5,5,5,5"/>
                 </Button>
             </StackPanel>
             <ContentControl x:Name="content1"></ContentControl>

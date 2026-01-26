@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\package.png" />
     <None Remove="Assets\refresh-cw.png" />
     <None Remove="Assets\shirt.png" />
     <None Remove="Assets\users-round.png" />
@@ -27,6 +28,7 @@
 
   <ItemGroup>
     <Resource Include="Assets\log-out.png" />
+    <Resource Include="Assets\package.png" />
     <Resource Include="Assets\refresh-cw.png" />
     <Resource Include="Assets\shirt.png" />
     <Resource Include="Assets\user-cog.png" />
@@ -42,6 +44,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ManagePackages.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ManageServTransac.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ManageServices.xaml.cs">
