@@ -8,7 +8,7 @@ using MiniLaundry.Models;
 
 #nullable disable
 
-namespace testWPF.Migrations
+namespace MiniLaundry.Migrations
 {
     [DbContext(typeof(DBHelper))]
     partial class DBHelperModelSnapshot : ModelSnapshot

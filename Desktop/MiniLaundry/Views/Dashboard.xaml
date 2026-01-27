@@ -21,7 +21,7 @@
                                 </TransformGroup>
                             </Image.RenderTransform>
                         </Image>
-                        <TextBlock Text="Log Out" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="6" FontFamily="Segoe UI Variable Display Semibold" Margin="0,0,0,5" />
+                        <TextBlock Text="Log Out" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="6" FontFamily="Segoe UI Variable Display Semibold" Margin="0,0,0,5" Foreground="White" />
                     </StackPanel>
                 </Button>
                 <TextBlock DockPanel.Dock="Left" Text="PenatuID" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" Margin="8,0,0,0" Foreground="White" MouseLeftButtonDown="emptyMenu"/>

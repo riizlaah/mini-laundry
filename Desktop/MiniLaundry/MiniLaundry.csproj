@@ -16,6 +16,7 @@
     <None Remove="Assets\refresh-cw.png" />
     <None Remove="Assets\scroll-text.png" />
     <None Remove="Assets\shirt.png" />
+    <None Remove="Assets\user.png" />
     <None Remove="Assets\users-round.png" />
     <None Remove="Views\log-out.png" />
     <None Remove="Views\user-cog.png" />
@@ -40,6 +41,7 @@
     <Resource Include="Assets\scroll-text.png" />
     <Resource Include="Assets\shirt.png" />
     <Resource Include="Assets\user-cog.png" />
+    <Resource Include="Assets\user.png" />
     <Resource Include="Assets\users-round.png" />
   </ItemGroup>
 

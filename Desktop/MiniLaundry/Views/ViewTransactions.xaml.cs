@@ -80,7 +80,7 @@ namespace MiniLaundry.Views
                     dtlTransacs2.Add(new DetailTransacV2 { Id = t.Id, Name = t.Service.Name, Type = "Layanan", Price = t.Service.Price, TotalUnit = t.TotalUnit, CompletedAt = t.CompletedAt});
                 } else
                 {
-                    dtlTransacs2.Add(new DetailTransacV2 { Id = t.Id, Name = t.Package.Name, Type = "Layanan", Price = t.Package.Price, TotalUnit = t.TotalUnit, CompletedAt = t.CompletedAt});
+                    dtlTransacs2.Add(new DetailTransacV2 { Id = t.Id, Name = t.Package.Name, Type = "Paket", Price = t.Package.Price, TotalUnit = t.TotalUnit, CompletedAt = t.CompletedAt});
                 }
             }
             detailTransacsTable.ItemsSource = dtlTransacs2;

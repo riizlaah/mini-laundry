@@ -181,8 +181,6 @@ namespace MiniLaundry.Models
                 ServiceId = 4,
                 TotalUnitService = 3
             });
-
-
             base.OnModelCreating(modelBuilder);
         }
     }
