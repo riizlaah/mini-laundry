@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniLaundry.Models;
 
@@ -11,9 +12,11 @@ using MiniLaundry.Models;
 namespace MiniLaundry.Migrations
 {
     [DbContext(typeof(DBHelper))]
-    partial class DBHelperModelSnapshot : ModelSnapshot
+    [Migration("20260127065636_tryDiscount")]
+    partial class tryDiscount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -213,9 +216,6 @@ namespace MiniLaundry.Migrations
 
                     b.Property<DateTime>("To")
                         .HasColumnType("datetime2");
-
-                    b.Property<float>("Value")
-                        .HasColumnType("real");
 
                     b.HasKey("Token");
 
