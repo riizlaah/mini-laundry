@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\manageservtransac.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\manageservtransac.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\viewtransactions.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\viewtransactions.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\manageservices.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\manageservices.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\models\\headertransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\models\\headertransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\models\\detailtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\models\\detailtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\manageemployees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\manageemployees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\manageservtransac.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\manageservtransac.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\adduser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\adduser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\viewtransactions.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\viewtransactions.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\managepkgtransac.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\managepkgtransac.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\adduser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\adduser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|c:\\users\\galih\\repos\\mini-laundry\\desktop\\minilaundry\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D20A7F56-1735-C59A-15A7-DE6A0B75C57B}|MiniLaundry\\MiniLaundry.csproj|solutionrelative:minilaundry\\views\\dashboard.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,58 +42,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DetailTransaction.cs",
-              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\DetailTransaction.cs",
-              "RelativeDocumentMoniker": "MiniLaundry\\Models\\DetailTransaction.cs",
-              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\DetailTransaction.cs",
-              "RelativeToolTip": "MiniLaundry\\Models\\DetailTransaction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T13:18:32.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HeaderTransaction.cs",
-              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\HeaderTransaction.cs",
-              "RelativeDocumentMoniker": "MiniLaundry\\Models\\HeaderTransaction.cs",
-              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\HeaderTransaction.cs",
-              "RelativeToolTip": "MiniLaundry\\Models\\HeaderTransaction.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Title": "ManageServices.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageServices.xaml.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ManageServices.xaml.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageServices.xaml.cs",
+              "RelativeToolTip": "MiniLaundry\\Views\\ManageServices.xaml.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T13:18:00.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T14:58:52.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AddUser.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\AddUser.xaml.cs",
-              "RelativeDocumentMoniker": "MiniLaundry\\Views\\AddUser.xaml.cs",
-              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\AddUser.xaml.cs",
-              "RelativeToolTip": "MiniLaundry\\Views\\AddUser.xaml.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAWwDMAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ManageEmployees.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageEmployees.xaml.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ManageEmployees.xaml.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageEmployees.xaml.cs",
+              "RelativeToolTip": "MiniLaundry\\Views\\ManageEmployees.xaml.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T10:53:10.724Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T14:58:17.513Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AddUser.xaml",
-              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\AddUser.xaml",
-              "RelativeDocumentMoniker": "MiniLaundry\\Views\\AddUser.xaml",
-              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\AddUser.xaml",
-              "RelativeToolTip": "MiniLaundry\\Views\\AddUser.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-26T10:37:10.949Z",
-              "EditorCaption": ""
+              "DocumentIndex": 6,
+              "Title": "ManagePkgTransac.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManagePkgTransac.xaml.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ManagePkgTransac.xaml.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManagePkgTransac.xaml.cs",
+              "RelativeToolTip": "MiniLaundry\\Views\\ManagePkgTransac.xaml.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T14:37:16.094Z"
             },
             {
               "$type": "Document",
@@ -103,47 +88,56 @@
               "RelativeDocumentMoniker": "MiniLaundry\\Views\\Dashboard.xaml.cs",
               "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\Dashboard.xaml.cs",
               "RelativeToolTip": "MiniLaundry\\Views\\Dashboard.xaml.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAA6wCoAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAowHUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T07:41:48.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T14:34:17.072Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Dashboard.xaml",
               "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\Dashboard.xaml",
               "RelativeDocumentMoniker": "MiniLaundry\\Views\\Dashboard.xaml",
               "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\Dashboard.xaml",
               "RelativeToolTip": "MiniLaundry\\Views\\Dashboard.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-26T07:41:40.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T14:34:12.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ManageServTransac.xaml",
-              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageServTransac.xaml",
-              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ManageServTransac.xaml",
-              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageServTransac.xaml",
-              "RelativeToolTip": "MiniLaundry\\Views\\ManageServTransac.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-26T06:33:48.396Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "HeaderTransaction.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\HeaderTransaction.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Models\\HeaderTransaction.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\HeaderTransaction.cs",
+              "RelativeToolTip": "MiniLaundry\\Models\\HeaderTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T14:23:50.918Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ManageServTransac.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageServTransac.xaml.cs",
-              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ManageServTransac.xaml.cs",
-              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ManageServTransac.xaml.cs",
-              "RelativeToolTip": "MiniLaundry\\Views\\ManageServTransac.xaml.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAAAiwO4AAAAAAAAAAAAAAA==",
+              "Title": "ViewTransactions.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ViewTransactions.xaml.cs",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ViewTransactions.xaml.cs",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ViewTransactions.xaml.cs",
+              "RelativeToolTip": "MiniLaundry\\Views\\ViewTransactions.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwCcAAAB+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-26T06:33:24.131Z",
+              "WhenOpened": "2026-01-26T14:00:54.643Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewTransactions.xaml",
+              "DocumentMoniker": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ViewTransactions.xaml",
+              "RelativeDocumentMoniker": "MiniLaundry\\Views\\ViewTransactions.xaml",
+              "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Views\\ViewTransactions.xaml",
+              "RelativeToolTip": "MiniLaundry\\Views\\ViewTransactions.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-26T14:41:43.176Z"
             }
           ]
         }

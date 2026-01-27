@@ -54,6 +54,9 @@
     <Compile Update="Views\ManagePackages.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ManagePkgTransac.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ManageServTransac.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

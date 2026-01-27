@@ -24,18 +24,18 @@ namespace testWPF.Views
     /// <summary>
     /// Interaction logic for ManageEmployees.xaml
     /// </summary>
-    public partial class ManageServTransac : UserControl
+    public partial class ManagePkgTransac : UserControl
     {
         private DBHelper DBHelper;
         private ObservableCollection<DetailTransaction> DetailTransacs { get; set; } = new ObservableCollection<DetailTransaction>();
         private List<Customer> Customers { get; set; }
         private int custId = -1;
         public Employee currUser = null!;
-        public ManageServTransac(DBHelper DBH)
+        public ManagePkgTransac(DBHelper DBH)
         {
             DBHelper = DBH;
             InitializeComponent();
-            serviceName.ItemsSource = DBH.Services.ToList();
+            pkgName.ItemsSource = DBH.Packages.ToList();
             serviceTable.ItemsSource = DetailTransacs;
             Customers = DBH.Customers.ToList();
         }
@@ -44,7 +44,7 @@ namespace testWPF.Views
         {
             int totalPrice = DetailTransacs.Sum(d => d.Price);
             estPrice.Content = string.Format("{0:Rp#,##0;(Rp#,##0);''}", totalPrice);
-            int totalTime = Convert.ToInt32(DetailTransacs.Sum(d => d.Service.EstimationDuration * d.TotalUnit));
+            int totalTime = Convert.ToInt32(DetailTransacs.Sum(d => d.Package.Duration * d.TotalUnit));
             estTime.Content = $"{totalTime} Jam";
         }
 
@@ -71,10 +71,10 @@ namespace testWPF.Views
             }
             if(DetailTransacs.Count < 1)
             {
-                MessageBox.Show("Layanan tidak boleh kosong!");
+                MessageBox.Show("Paket tidak boleh kosong!");
                 return;
             }
-            int totalHours = Convert.ToInt32(DetailTransacs.Sum(d => d.Service.EstimationDuration * d.TotalUnit));
+            int totalHours = Convert.ToInt32(DetailTransacs.Sum(d => d.Package.Duration * d.TotalUnit));
             HeaderTransaction hdrTransac = new HeaderTransaction
             {
                 CustomerId = custId,
@@ -97,36 +97,36 @@ namespace testWPF.Views
             address.Text = "";
             custName.Text = "";
             unit.Text = "";
-            serviceName.SelectedIndex = -1;
+            pkgName.SelectedIndex = -1;
             estPrice.Content = "Rp0";
             estTime.Content = "0 Jam";
         }
 
         private void addService(object sender, RoutedEventArgs e)
         {
-            if(serviceName.SelectedItem == null)
+            if(pkgName.SelectedItem == null)
             {
                 MessageBox.Show("Please, select a service");
                 return;
             }
-            if(!Regex.IsMatch(unit.Text, @"^\d+\.?\d*$"))
+            if(!unit.Text.All(Char.IsDigit))
             {
-                MessageBox.Show("The number of service is not valid");
+                MessageBox.Show("The quantity of package is not valid");
                 return;
             }
-            float unitVal = float.Parse(unit.Text, CultureInfo.InvariantCulture);
+            float unitVal = int.Parse(unit.Text);
             Debug.WriteLine(unitVal);
             if (unitVal < 1)
             {
-                MessageBox.Show("The number of service is not valid");
+                MessageBox.Show("The quantity of package is not valid");
                 return;
             }
             DetailTransaction dtlTransac = new DetailTransaction
             {
-                Service = serviceName.SelectedItem as Service,
-                ServiceId = (int)serviceName.SelectedValue,
+                Package = pkgName.SelectedItem as Package,
+                PackageId = (int)pkgName.SelectedValue,
                 TotalUnit = unitVal,
-                Price = (int)((serviceName.SelectedItem as Service).Price * unitVal),
+                Price = (int)((pkgName.SelectedItem as Package).Price * unitVal),
             };
             DetailTransacs.Add(dtlTransac);
             updateDetail();

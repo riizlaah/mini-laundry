@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MiniLaundry.Models;
 
@@ -11,9 +12,11 @@ using MiniLaundry.Models;
 namespace testWPF.Migrations
 {
     [DbContext(typeof(DBHelper))]
-    partial class DBHelperModelSnapshot : ModelSnapshot
+    [Migration("20260126142948_transactions2")]
+    partial class transactions2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,13 +92,6 @@ namespace testWPF.Migrations
                             Address = "Pekalongan",
                             Name = "Bowo",
                             PhoneNum = "+6287655387653"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Address = "Tegal",
-                            Name = "Budiono",
-                            PhoneNum = "+6280766498076"
                         });
                 });
 
@@ -145,20 +141,6 @@ namespace testWPF.Migrations
                             PackageId = 1,
                             ServiceId = 5,
                             TotalUnitService = 2
-                        },
-                        new
-                        {
-                            Id = 4,
-                            PackageId = 2,
-                            ServiceId = 3,
-                            TotalUnitService = 3
-                        },
-                        new
-                        {
-                            Id = 5,
-                            PackageId = 2,
-                            ServiceId = 4,
-                            TotalUnitService = 3
                         });
                 });
 
@@ -254,42 +236,6 @@ namespace testWPF.Migrations
                             Password = "p4s?",
                             PhoneNum = "+6289988776655",
                             Salary = 3000000m
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "Mars",
-                            DateOfBirth = new DateTime(2003, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "hartono09@gmail.com",
-                            JobId = 2,
-                            Name = "Hartono",
-                            Password = "p4s?",
-                            PhoneNum = "+62876533876532",
-                            Salary = 2500000m
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Address = "Ds. Klewer, Kec. Tulis",
-                            DateOfBirth = new DateTime(2002, 5, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "ubed25@gmail.com",
-                            JobId = 3,
-                            Name = "Ubed",
-                            Password = "p4s?",
-                            PhoneNum = "+6286544987320",
-                            Salary = 2500000m
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Address = "Ds. Sengon, Kec. Subah",
-                            DateOfBirth = new DateTime(2003, 8, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "komar@gmail.com",
-                            JobId = 4,
-                            Name = "Komar",
-                            Password = "p4s?",
-                            PhoneNum = "+6289267530098",
-                            Salary = 2500000m
                         });
                 });
 
@@ -353,11 +299,6 @@ namespace testWPF.Migrations
                         {
                             Id = 3,
                             Name = "Penyetrika"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Kurir"
                         });
                 });
 
@@ -395,14 +336,6 @@ namespace testWPF.Migrations
                             Duration = 14,
                             Name = "Paket Hari Raya",
                             Price = 100000
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Paket yang mendekati kecepatan cahaya",
-                            Duration = 6,
-                            Name = "Paket Kilat",
-                            Price = 150000
                         });
                 });
 

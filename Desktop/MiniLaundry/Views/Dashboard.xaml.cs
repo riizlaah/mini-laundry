@@ -1,4 +1,5 @@
 ﻿using MiniLaundry.Models;
+using MiniLaundry.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,8 @@ namespace testWPF.Views
         ManageCustomers mngCustomers;
         ManagePackages mngPackages;
         ManageServTransac mngServTransac;
+        ManagePkgTransac mngPkgTransac;
+        ViewTransactions viewTransactions;
         public Dashboard(MainWindow mWindow, Employee cUser, DBHelper DBH)
         {
             _currUser = cUser;
@@ -40,6 +43,9 @@ namespace testWPF.Views
             mngCustomers = new ManageCustomers(DBH);
             mngPackages = new ManagePackages(DBH);
             mngServTransac = new ManageServTransac(DBH);
+            mngPkgTransac = new ManagePkgTransac(DBH);
+            viewTransactions = new ViewTransactions(DBH);
+            mngPkgTransac.currUser = _currUser;
             mngServTransac.currUser = _currUser;
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -103,12 +109,13 @@ namespace testWPF.Views
 
         private void managePackageTransactionClicked(object sender, RoutedEventArgs e)
         {
-
+            content1.Content = mngPkgTransac;
         }
 
         private void viewTransactionClicked(object sender, RoutedEventArgs e)
         {
-
+            content1.Content = viewTransactions;
+            viewTransactions.RefreshData();
         }
     }
 }

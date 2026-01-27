@@ -10,8 +10,9 @@ namespace MiniLaundry.Models
         public int CustomerId { get; set; }
         public int EmployeeId { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime? CompleteEstDate { get; set; }
+        public DateTime CompleteEstDate { get; set; }
         public Customer Customer { get; set; } = null!;
         public Employee Employee { get; set; } = null!;
+        public ICollection<DetailTransaction> DetailTransactions { get; set; }
     }
 }

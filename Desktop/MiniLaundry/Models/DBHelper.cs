@@ -27,8 +27,8 @@ namespace MiniLaundry.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             Job adminJob = new Job { Id = 1, Name = "Administrator" };
-            modelBuilder.Entity<Job>().HasData(adminJob, new Job { Id = 2, Name = "Pencuci" }, new Job { Id = 3, Name = "Penyetrika" });
-            modelBuilder.Entity<Employee>().HasData(new
+            modelBuilder.Entity<Job>().HasData(adminJob, new Job { Id = 2, Name = "Pencuci" }, new Job { Id = 3, Name = "Penyetrika" }, new Job { Id = 4, Name = "Kurir" });
+            modelBuilder.Entity<Employee>().HasData(new Employee
             {
                 Id = 1,
                 Name = "Admin",
@@ -39,19 +39,58 @@ namespace MiniLaundry.Models
                 DateOfBirth = new DateTime(2000, 1, 1),
                 Salary = 3000000m,
                 JobId = adminJob.Id
+            }, new Employee
+            {
+                Id = 2,
+                Name = "Hartono",
+                Email = "hartono09@gmail.com",
+                Password = "p4s?",
+                PhoneNum = "+62876533876532",
+                Address = "Mars",
+                DateOfBirth = new DateTime(2003, 8, 7),
+                Salary = 2500000m,
+                JobId = 2
+            }, new Employee
+            {
+                Id = 3,
+                Name = "Ubed",
+                Email = "ubed25@gmail.com",
+                Password = "p4s?",
+                PhoneNum = "+6286544987320",
+                Address = "Ds. Klewer, Kec. Tulis",
+                DateOfBirth = new DateTime(2002, 5, 17),
+                Salary = 2500000m,
+                JobId = 3
+            }, new Employee
+            {
+                Id = 4,
+                Name = "Komar",
+                Email = "komar@gmail.com",
+                Password = "p4s?",
+                PhoneNum = "+6289267530098",
+                Address = "Ds. Sengon, Kec. Subah",
+                DateOfBirth = new DateTime(2003, 8, 7),
+                Salary = 2500000m,
+                JobId = 4
             });
-            modelBuilder.Entity<Customer>().HasData(new
+            modelBuilder.Entity<Customer>().HasData(new Customer
             {
                 Id = 1,
                 Name = "Alok",
                 PhoneNum = "+6256488976532",
                 Address = "Batang"
-            }, new
+            }, new Customer
             {
                 Id = 2,
                 Name = "Bowo",
                 PhoneNum = "+6287655387653",
                 Address = "Pekalongan"
+            }, new Customer
+            {
+                Id = 3,
+                Name = "Budiono",
+                PhoneNum = "+6280766498076",
+                Address = "Tegal"
             });
             modelBuilder.Entity<Unit>().HasData(new Unit { Id = 1, Name = "Kg" }, new Unit { Id = 2, Name = "m" });
             modelBuilder.Entity<Category>().HasData(new Category { Id = 1, Name = "Kiloan" }, new Category { Id = 2, Name = "Meteran" });
@@ -103,6 +142,13 @@ namespace MiniLaundry.Models
                 Description = "Paket untuk hari raya",
                 Duration = 14,
                 Price = 100000
+            }, new Package
+            {
+                Id = 2,
+                Name = "Paket Kilat",
+                Description = "Paket yang mendekati kecepatan cahaya",
+                Duration = 6,
+                Price = 150000
             });
             modelBuilder.Entity<DetailPackage>().HasData(new DetailPackage
             {
@@ -122,6 +168,18 @@ namespace MiniLaundry.Models
                 PackageId = 1,
                 ServiceId = 5,
                 TotalUnitService = 2
+            }, new DetailPackage
+            {
+                Id = 4,
+                PackageId = 2,
+                ServiceId = 3,
+                TotalUnitService = 3
+            }, new DetailPackage
+            {
+                Id = 5,
+                PackageId = 2,
+                ServiceId = 4,
+                TotalUnitService = 3
             });
 
 
