@@ -13,7 +13,9 @@ data class User (
 
 class AuthManager {
     private val users = mutableMapOf(
-        "admin" to User("admin", "Admin Hengker", "nullbyte")
+        "admin" to User("admin", "Admin Hengker", "nullbyte"),
+        "ali" to User("ali", "Ali Houndini", "password"),
+        "budi" to User("budi", "Budi Santoso", "password")
     )
     var currUser by mutableStateOf<User?>(null)
         private set
