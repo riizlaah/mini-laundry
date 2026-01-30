@@ -5,43 +5,37 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import penatu.id.mobile.data.AuthManager
 import penatu.id.mobile.ui.theme.LaundryMobileTheme
+import penatu.id.mobile.view.DashboardScreen
+import penatu.id.mobile.view.LoginScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            LaundryMobileTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            Index()
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
+fun Index() {
+    val authManager = remember { AuthManager() }
     LaundryMobileTheme {
-        Greeting("Android")
+        Surface(modifier = Modifier.fillMaxSize()) {
+            if(authManager.isLoggedIn) {
+                DashboardScreen(authManager, onLogout = {authManager.logout()})
+            } else {
+                LoginScreen(authManager, onLoginSuccess = {})
+            }
+        }
     }
 }
