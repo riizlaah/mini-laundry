@@ -39,11 +39,13 @@ fun LoginScreen(authManager: AuthManager, onLoginSuccess: () -> Unit) {
         Column(Modifier.padding(32.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             OutlinedTextField(
                 username, onValueChange = { newText: String -> username = newText },
-                label = { Text("Username") }, modifier = Modifier.fillMaxWidth()
+                label = { Text("Username") }, modifier = Modifier.fillMaxWidth(),
+                singleLine = true
             )
             OutlinedTextField(
                 password, onValueChange = { newText: String -> password = newText },
-                label = { Text("Password") }, modifier = Modifier.fillMaxWidth()
+                label = { Text("Password") }, modifier = Modifier.fillMaxWidth(),
+                singleLine = true
             )
             if(errMessage.isNotEmpty()) {
                 Text(errMessage, color = MaterialTheme.colorScheme.error, modifier = Modifier.padding(8.dp).fillMaxWidth())

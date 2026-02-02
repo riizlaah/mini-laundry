@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "MiniLaundry\\Models\\DBHelper.cs",
               "ToolTip": "C:\\Users\\galih\\repos\\mini-laundry\\Desktop\\MiniLaundry\\Models\\DBHelper.cs",
               "RelativeToolTip": "MiniLaundry\\Models\\DBHelper.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA1wBMAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-27T06:55:22.187Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "MiniLaundry\\Models\\DetailTransaction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T06:54:36.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T06:54:36.058Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "MiniLaundry\\Models\\HeaderTransaction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T06:50:28.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T06:50:28.363Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "MiniLaundry\\Models\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T06:49:38.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T06:49:38.506Z"
             }
           ]
         }

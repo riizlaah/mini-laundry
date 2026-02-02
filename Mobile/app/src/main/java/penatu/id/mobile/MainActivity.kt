@@ -1,5 +1,7 @@
 package penatu.id.mobile
 
+import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -36,4 +38,10 @@ fun Index() {
             }
         }
     }
+}
+
+fun Context.buildAlert(msg: String, title: String = "Alert"): AlertDialog {
+    val builder = AlertDialog.Builder(this)
+    builder.setMessage(msg).setTitle(title)
+    return builder.create()
 }
