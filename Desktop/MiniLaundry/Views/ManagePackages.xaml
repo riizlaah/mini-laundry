@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="testWPF.Views.ManagePackages"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:testWPF.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800" Background="White" Padding="5,5,5,5">
+    <Grid>
+        <DockPanel>
+            <DockPanel DockPanel.Dock="Top" Height='36' LastChildFill="False" Margin="0,0,0,8">
+                <Button x:Name="tambah" DockPanel.Dock="Left" Padding="12,4,12,4" Click="AddEmployee" TabIndex="1">Tambah</Button>
+                <TextBox x:Name="search" DockPanel.Dock="Left" Width="150" Margin="6,0,6,0" TextChanged="TrySearch" AcceptsTab="True" TabIndex="2" FontSize="16" HorizontalAlignment="Center" Padding="0,5,0,5"/>
+                <Button x:Name="refresh" DockPanel.Dock="Left" Click="Refresh" TabIndex="3">
+                    <Image Width="24" Margin="4,4,4,4" Source="/Assets/refresh-cw.png"/>
+                </Button>
+                <Button x:Name="delete" DockPanel.Dock="Right" Padding="12,4,12,4" Click="DeleteEmployee" TabIndex="5">Hapus</Button>
+                <Button x:Name="edit" DockPanel.Dock="Right" Padding="12,4,12,4" Margin="0,0,6,0" Click="EditEmployee" TabIndex="4">Edit</Button>
+            </DockPanel>
+            <ContentControl x:Name="detailPanel" DockPanel.Dock="Bottom" Height="120" Padding="8,8,8,8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="350*"></ColumnDefinition>
+                        <ColumnDefinition Width="341*"></ColumnDefinition>
+                        <ColumnDefinition Width="99*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1" x:Name="addServices">
+                        <Label Content="Layanan" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" Width="97" RenderTransformOrigin="-0.009,0.652" Grid.Column="1"/>
+                        <TextBox x:Name="qty" HorizontalAlignment="Right" Margin="0,46,122,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Height="18" TabIndex="8"/>
+                        <Label Content="Kuantitas" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" Width="120" RenderTransformOrigin="-0.009,0.652"/>
+                        <ComboBox x:Name="service" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="192" SelectedIndex="0" Height="22" DisplayMemberPath="Name" SelectedValuePath="Id" TabIndex="12" Grid.Column="1"  />
+                        <Button Content="Tambah" Margin="0,42,10,0" VerticalAlignment="Top" Padding="12,4,12,4" Height="26" IsCancel="True" Click="addService" TabIndex="20" HorizontalAlignment="Right" Width="96"/>
+                        <Button Content="Batal" Margin="0,79,10,0" VerticalAlignment="Top" Padding="12,4,12,4" Height="26" IsCancel="True" Click="hideDetail" TabIndex="20" HorizontalAlignment="Right" Width="192"/>
+                    </Grid>
+                    <Grid Grid.Column="0" x:Name="pkgInputs">
+                        <TextBox x:Name="name" HorizontalAlignment="Right" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="18" TabIndex="6"/>
+                        <Label Content="Nama Paket" Margin="10,10,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" RenderTransformOrigin="-0.009,0.652" HorizontalAlignment="Left" Width="91"/>
+                        <TextBox x:Name="description" HorizontalAlignment="Right" Margin="0,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" Height="64" TabIndex="9"/>
+                        <Label Content="Deskripsi" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Padding="0,0,0,0" Height="16" Width="60" RenderTransformOrigin="-0.009,0.652"/>
+                    </Grid>
+                    <Button x:Name="save" Content="Simpan" Margin="0,10,0,0" VerticalAlignment="Top" Padding="12,4,12,4" Height="26" Click="saveEmployee" Grid.Column="2" RenderTransformOrigin="0.503,0.205" TabIndex="14"/>
+                    <Button x:Name="cancel" Content="Batal" Margin="0,43,0,0" VerticalAlignment="Top" Padding="12,4,12,4" Height="26" IsCancel="True" Click="hideDetail" Grid.Column="2" TabIndex="20"/>
+
+                </Grid>
+            </ContentControl>
+
+            <DataGrid x:Name="detailPackageTable" IsReadOnly="True" Height="160" AutoGenerateColumns="False" ScrollViewer.VerticalScrollBarVisibility="Visible" DockPanel.Dock="Bottom" SelectedCellsChanged="detailPackageSelectedCell" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nama Layanan" Binding="{Binding Service.Name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Harga" Binding="{Binding Service.Price, StringFormat='C0', ConverterCulture='id-ID'}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Estimasi Durasi" Binding="{Binding Service.EstimationDuration}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Unit" Binding="{Binding TotalUnitService}"></DataGridTextColumn>
+                    <DataGridTemplateColumn Header="Aksi">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Delete" Click="DeletePackageDetail" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid x:Name="packageTable" IsReadOnly="True" AutoGenerateColumns="False" ScrollViewer.VerticalScrollBarVisibility="Visible" MouseLeftButtonUp="pkgCellSelected">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nama" Binding="{Binding Name}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Deskripsi" Binding="{Binding Description}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Harga" Binding="{Binding Price, StringFormat='C0', ConverterCulture='id-ID'}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Estimasi Durasi" Binding="{Binding Duration}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+    </Grid>
+</UserControl>
